@@ -117,8 +117,9 @@ public class framePDF extends JFrame {
                     } catch (Exception ex) {
                         System.out.println(ex);
                     }
+                } else {
+                   JOptionPane.showMessageDialog(null, "Error saat melakukan ekspor PDF");
                 }
-
             }
         });
         btnConvert.setBounds(153, 224, 187, 48);
@@ -147,8 +148,8 @@ public class framePDF extends JFrame {
         setLocationRelativeTo(null);
     }
 
-    public Object getObject(JTable tabel, int idx_baris, int idx_kolom) {
-        return tabel.getModel().getValueAt(idx_baris, idx_kolom);
+    public Object getObject(JTable tabel, int idxBaris, int idxKolom) {
+        return tabel.getModel().getValueAt(idxBaris, idxKolom);
     }
 
     /**
